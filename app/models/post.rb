@@ -4,6 +4,5 @@ class Post < ApplicationRecord
     validates :description, prescence: true, length: {minimum: 5, maximum: 500}
     validates :keywords, prescence: true, length: {minimum: 5, maximum: 100}
         
-    end
-    
+   has_many_attached :images    
 end

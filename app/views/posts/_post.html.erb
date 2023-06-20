@@ -11,6 +11,9 @@
     <%= post.keywords %>
   </p>
   <p>
-      <%= link_to "Show this post", post, class: "post link" %>
+      <%= link_to " ", post, class: "post link" %>
     </p>
+    <% post.images.each do |image| %>
+      <% image_tag (image, stye: o"object-fit : cover; width: 300px; heigt: 600px;")%>
+    <% end %>
 </div>
