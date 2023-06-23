@@ -6,13 +6,11 @@ class User < ApplicationRecord
 
          has_many :posts
 
-         before_create : randomizse_id
+         before_create :randomize_id
          private
-         def randomizse_id
+         def randomize_id
             begin
-              self.id = Securerandom.random_number
-              (1_000_000_000)
-            end ehile User.where(id: self.id).exists?
-              
+            self.id = Securerandom.random_number(1_000_000_000)
+            end while User.where(id: self.id).exists?             
             end
 end
