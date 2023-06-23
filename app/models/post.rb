@@ -7,4 +7,14 @@ class Post < ApplicationRecord
    has_many_attached :images    
 
    belongs_to :users
+
+   before_create : randomize_id
+   private
+   def randomizse_id
+      begin
+        self.id = Securerandom.random_number
+        (1_000_000_000)
+      end ehile User.where(id: self.id).exists?
+        
+      end
 end
