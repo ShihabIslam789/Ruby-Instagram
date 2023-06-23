@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   devise_scrape :user do
     get '/users', to: 'devise/registrations#new'
     get '/users/password', to: 'devise/passwords#new'
-    get '/users/sign_out' => to: 'devise/sessions#destroy'
+    get '/users/sign_out' =>  'devise/sessions#destroy'
   end
-  devise_for :users
-
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+  resources :users, only: [:show]
   
   get 'home/about'
   resources :posts
