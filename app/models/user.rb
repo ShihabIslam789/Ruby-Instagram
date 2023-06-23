@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :posts
-
+         has_many :comments
+         has_one_attached :avatar
          before_create :randomize_id
          private
          def randomize_id
