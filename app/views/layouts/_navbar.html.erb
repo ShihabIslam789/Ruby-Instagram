@@ -25,6 +25,10 @@
       <li>
       <%else%>
 
+      <li class = "nav-item">
+        <%= link_to "View my Posts",posts_myposts_path ,class: "nav-link"%>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         <%= link_to "About Page", home_about_path, 
