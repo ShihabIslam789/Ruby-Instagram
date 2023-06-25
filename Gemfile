@@ -19,6 +19,7 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'followability', github: 'nejdetkadir/followability', branch: 'main'
 gem 'rails_admin'
 gem 'pagy'
+gem 'active_analytics'
 
 
 group :development, :test do

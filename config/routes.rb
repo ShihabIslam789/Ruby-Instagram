@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  authenticate :user, -> (u) { u.admin? } do # Supposing there is a User#admin? method
+  mount ActiveAnalytics::Engine, at: "analytics"  # http://localhost:3000/analytics
   get 'profiles/index'
 
   resources :likes, only: [:create, :destroy]
