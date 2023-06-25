@@ -13,7 +13,11 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem 'ransack'
 gem "bootsnap", require: false
+
+# My custom Gem
 gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'followability', github: 'nejdetkadir/followability', branch: 'main'
+gem 'rails_admin'
 
 
 group :development, :test do
@@ -29,5 +33,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem 'followability', github: 'nejdetkadir/followability', branch: 'main'
+gem "cssbundling-rails"
