@@ -16,5 +16,13 @@
   <% current_user.following.each do |following| %>
     <p> <%= link_to following.email, following %> </p>
   <% end %>
-
-<%= link_to "New post", new_post_path %>
+<% end %>
+<p style="color: green"><%= notice %></p>
+<%= raw pagy_bootstrap_nav(@pagy) %>
+<div class = "row">
+  <div id = "posts" class = "text-center">
+    <% @posts.each do |post|%>
+      <% render post %>
+    <% end %>
+  </div>
+</div>

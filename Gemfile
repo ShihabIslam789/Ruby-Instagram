@@ -18,6 +18,7 @@ gem "bootsnap", require: false
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'followability', github: 'nejdetkadir/followability', branch: 'main'
 gem 'rails_admin'
+gem 'pagy'
 
 
 group :development, :test do
