@@ -7,7 +7,7 @@ include Pagy::Backend
   # GET /posts or /posts.json
   def index
     @posts = Post.order(:created_at => :asc)
-    @pagy, @posts = pagy(@posts, items: 1)
+    @pagy, @posts = pagy_countless(@posts, items: 1)
   end
 
   # GET /posts/1 or /posts/1.json
