@@ -20,6 +20,7 @@ gem 'followability', github: 'nejdetkadir/followability', branch: 'main'
 gem 'rails_admin'
 gem 'pagy'
 gem 'active_analytics'
+gem 'punching_bag'
 
 
 group :development, :test do
@@ -35,4 +36,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
+gem "redis", "~> 4.0"
+gem "pg", "~> 1.4"
 gem "cssbundling-rails"
