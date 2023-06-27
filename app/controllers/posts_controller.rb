@@ -10,6 +10,8 @@ include Pagy::Backend
     @pagy, @posts = pagy_countless(@posts, items: 1)
   end
 
+  def discover
+    @posts = Post.all
   # GET /posts/1 or /posts/1.json
   def show
     @comments = @post.comments.build
